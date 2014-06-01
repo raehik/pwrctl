@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 str1_mac=00:1e:4f:99:a5:76
 str1_ip=192.168.1.41
