@@ -8,12 +8,12 @@ maple_ip=192.168.1.98
 
 usage() {
     cat <<EOF
-Usage: ${0##*/} [options] command IP|MAC
+Usage: ${0##*/} [options] command computer
 
   Commands:
-    on              turn computer on (requires MAC)
-    off             turn computer off (requires IP)
-    ping            ping IP (requires IP)
+    on              turn computer on
+    off             turn computer off
+    ping            ping IP
 
   Options:
     -h              display this help message
@@ -37,8 +37,6 @@ elif [[ $1 == "off" ]]; then
     ssh -t -p22 root@$ip "poweroff"
 elif [[ $1 == "ping" ]]; then
     fping $ip
-    # if $? -eq 0; then; echo on
-    # else; echo off
 else
     echo "error: argument 1 not a valid command"
 fi
