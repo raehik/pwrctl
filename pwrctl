@@ -32,7 +32,7 @@ ip=${2}_ip
 ip=${!ip}
 
 if [[ $1 == "on" ]]; then
-    wakeonlan $mac
+    wol $mac
 elif [[ $1 == "off" ]]; then
     ssh -t -p22 root@$ip "poweroff"
 elif [[ $1 == "ping" ]]; then
